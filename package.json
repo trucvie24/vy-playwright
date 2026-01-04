@@ -5,10 +5,15 @@
   "scripts": {
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "test:chrome":"playwright test --project=chromiu",
+    "test:chrome": "playwright test --project=chromiu",
     "test:debug": "playwright test example",
-    "test:report":"playwright show-report"
+    "test:report": "playwright show-report",
+    "test:login": "playwright test login --project=chromium --headed",
+    "test:login-data": "playwright test login-data --project=chromium --headed",
+    "test:home": "playwright test home --project=chromium --headed",
+    "test:my-info": "playwright test myinfo --project=chromium --headed"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trucvie24/vy-playwright.git"
@@ -24,5 +29,8 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^25.0.3"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0"
   }
 }
